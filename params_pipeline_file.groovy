@@ -10,13 +10,11 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                //echo "Hello ${params.PERSON}"
                 echo "testing phase"
             }
         }
         stage('Deploy') {
             steps {
-                //echo "Hello ${params.PERSON}"
                 echo "Deployment stage"
             }
         }
