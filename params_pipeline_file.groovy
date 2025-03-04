@@ -22,6 +22,11 @@ pipeline {
             steps {
                 echo "Generate a report"
                 sh "printf \"Thisw is the change log.\" > report.txt"
+                archiveArtifacts allowEmptyArchive: true,
+                artifacts: '*.txt',
+                fingerprint: true,
+                followSynlinks: false,
+                onlyIfSuccessful: true
 
             }
         }
